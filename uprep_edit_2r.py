@@ -228,7 +228,8 @@ class UPrepEdit2R:
                     col_max = col_num
                 # self.dlg.debugBrowser.setText(str(col_max))
 
-            ver_max = col_max - 15
+            # 座標データ（coordinates）の前までの「，」（カンマ）の数を差し引く
+            ver_max = col_max - 17
 
             # C:\にdataディレクトリがなければ作成する
             dirs = os.listdir("C:/")
@@ -262,10 +263,10 @@ class UPrepEdit2R:
                 # 座標データの数をコンマの数から調べる
                 com_num = line_rep_8.count(",")
                 if row_no == num_lines - 2:
-                    vertex = com_num - 13
+                    vertex = com_num - 14
                     com_rep_num = ver_max - vertex
                 else:
-                    vertex = com_num - 14
+                    vertex = com_num - 15
                     com_rep_num = ver_max - vertex
 
                 # 長い不要な文字列を座標データの数値で置き換える
