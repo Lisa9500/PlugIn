@@ -312,8 +312,10 @@ class UPAttrEditor:
             pr_4.addAttributes([QgsField("4_basement", QVariant.Int)])
             aLayer.updateFields()
 
-            pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 0}})
-            # 地下階数は0階をデフォルトとする
+            for feat_4 in aLayer.getFeatures():
+                attr_4Name = '4_basement'
+                pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 0}})
+                # 地下階数は0階をデフォルトとする
 
             # 5_yanetype Field Adding
             pr_5 = aLayer.dataProvider()
