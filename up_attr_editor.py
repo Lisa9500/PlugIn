@@ -306,193 +306,202 @@ class UPAttrEditor:
                 elif compData[feat_3.id()] == u"堅ろう無壁舎":
                     pr_3.changeAttributeValues({feat_3.id() : {pr_3.fieldNameMap()[attr_3Name] : 1}})
 
-            # 4_yanetype Field Adding
+            # 地下階数の追加
+            # 4_basement Field Adding
             pr_4 = aLayer.dataProvider()
-            # self.dlg.textBrowser.setText(str(pr_4))
-            pr_4.addAttributes([QgsField("4_yanetype", QVariant.Int)])
+            pr_4.addAttributes([QgsField("4_basement", QVariant.Int)])
             aLayer.updateFields()
-            # self.dlg.textBrowser.setText(str(pr_4))
 
-            for feat_4 in aLayer.getFeatures():
-                # self.dlg.textBrowser.setText(str(feat_4))
+            pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 0}})
+            # 地下階数は0階をデフォルトとする
 
-                yanetypeIndex = self.dlg.yanetypeBox.currentIndex()
-
-                attr_4Name = '4_yanetype'
-                if yanetypeIndex == 0:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 0}})
-                elif yanetypeIndex == 1:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 1}})
-                elif yanetypeIndex == 2:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 2}})
-                elif yanetypeIndex == 3:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 3}})
-                elif yanetypeIndex == 4:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 4}})
-                elif yanetypeIndex == 5:
-                    pr_4.changeAttributeValues({feat_4.id() : {pr_4.fieldNameMap()[attr_4Name] : 8}})
-
-            # 5_incline Field Adding
+            # 5_yanetype Field Adding
             pr_5 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr_5))
-            pr_5.addAttributes([QgsField("5_incline", QVariant.Double)])
+            pr_5.addAttributes([QgsField("5_yanetype", QVariant.Int)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr_5))
 
             for feat_5 in aLayer.getFeatures():
                 # self.dlg.textBrowser.setText(str(feat_5))
 
-                inclineIndex = self.dlg.inclineBox.currentIndex()
+                yanetypeIndex = self.dlg.yanetypeBox.currentIndex()
 
-                attr_5Name = '5_incline'
-                if inclineIndex == 0:
-                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 0.3}})
-                elif inclineIndex == 1:
-                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 0.4}})
-                elif inclineIndex == 2:
-                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 0.5}})
-                elif inclineIndex == 3:
-                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 0.6}})
+                attr_5Name = '5_yanetype'
+                if yanetypeIndex == 0:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 0}})
+                elif yanetypeIndex == 1:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 1}})
+                elif yanetypeIndex == 2:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 2}})
+                elif yanetypeIndex == 3:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 3}})
+                elif yanetypeIndex == 4:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 4}})
+                elif yanetypeIndex == 5:
+                    pr_5.changeAttributeValues({feat_5.id() : {pr_5.fieldNameMap()[attr_5Name] : 8}})
 
-            # 6_hiratuma Field Adding
+            # 6_incline Field Adding
             pr_6 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr_6))
-            pr_6.addAttributes([QgsField("6_hiratuma", QVariant.Int)])
+            pr_6.addAttributes([QgsField("6_incline", QVariant.Double)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr_6))
 
             for feat_6 in aLayer.getFeatures():
-                # self.dlg.textBrowser.setText(str(feat_6))
+                # self.dlg.textBrowser.setText(str(feat65))
 
-                hiratumaIndex = self.dlg.hiratumaBox.currentIndex()
+                inclineIndex = self.dlg.inclineBox.currentIndex()
 
-                attr_6Name = '6_hiratuma'
-                if hiratumaIndex == 0:
-                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 1}})
-                elif hiratumaIndex == 1:
-                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 2}})
+                attr_6Name = '6_incline'
+                if inclineIndex == 0:
+                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 0.3}})
+                elif inclineIndex == 1:
+                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 0.4}})
+                elif inclineIndex == 2:
+                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 0.5}})
+                elif inclineIndex == 3:
+                    pr_6.changeAttributeValues({feat_6.id() : {pr_6.fieldNameMap()[attr_6Name] : 0.6}})
 
-            # 7_yanemuki Field Adding
+            # 7_hiratuma Field Adding
             pr_7 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr_7))
-            pr_7.addAttributes([QgsField("7_yanemuki", QVariant.Int)])
+            pr_7.addAttributes([QgsField("7_hiratuma", QVariant.Int)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr_7))
 
             for feat_7 in aLayer.getFeatures():
                 # self.dlg.textBrowser.setText(str(feat_7))
 
-                yanemukiIndex = self.dlg.yanemukiBox.currentIndex()
+                hiratumaIndex = self.dlg.hiratumaBox.currentIndex()
 
-                attr_7Name = '7_yanemuki'
-                if yanemukiIndex == 0:
+                attr_7Name = '7_hiratuma'
+                if hiratumaIndex == 0:
                     pr_7.changeAttributeValues({feat_7.id() : {pr_7.fieldNameMap()[attr_7Name] : 1}})
-                elif yanemukiIndex == 1:
+                elif hiratumaIndex == 1:
                     pr_7.changeAttributeValues({feat_7.id() : {pr_7.fieldNameMap()[attr_7Name] : 2}})
-                elif yanemukiIndex == 2:
-                    pr_7.changeAttributeValues({feat_7.id() : {pr_7.fieldNameMap()[attr_7Name] : 3}})
-                elif yanemukiIndex == 3:
-                    pr_7.changeAttributeValues({feat_7.id() : {pr_7.fieldNameMap()[attr_7Name] : 4}})
 
-            # 8_hisashi Field Adding
+            # 8_yanemuki Field Adding
             pr_8 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr_8))
-            pr_8.addAttributes([QgsField("8_hisashi", QVariant.Double)])
+            pr_8.addAttributes([QgsField("8_yanemuki", QVariant.Int)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr_8))
 
             for feat_8 in aLayer.getFeatures():
                 # self.dlg.textBrowser.setText(str(feat_8))
 
-                hisashiIndex = self.dlg.hisashiBox.currentIndex()
+                yanemukiIndex = self.dlg.yanemukiBox.currentIndex()
 
-                attr_8Name = '8_hisashi'
-                if hisashiIndex == 0:
-                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 0.3}})
-                elif hisashiIndex == 1:
-                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 0.45}})
-                elif hisashiIndex == 2:
-                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 0.6}})
-                elif hisashiIndex == 3:
-                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 0.9}})
+                attr_8Name = '8_yanemuki'
+                if yanemukiIndex == 0:
+                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 1}})
+                elif yanemukiIndex == 1:
+                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 2}})
+                elif yanemukiIndex == 2:
+                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 3}})
+                elif yanemukiIndex == 3:
+                    pr_8.changeAttributeValues({feat_8.id() : {pr_8.fieldNameMap()[attr_8Name] : 4}})
 
-            # 9_keraba Field Adding
+            # 9_hisashi Field Adding
             pr_9 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr_9))
-            pr_9.addAttributes([QgsField("9_keraba", QVariant.Double)])
+            pr_9.addAttributes([QgsField("9_hisashi", QVariant.Double)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr_9))
 
             for feat_9 in aLayer.getFeatures():
                 # self.dlg.textBrowser.setText(str(feat_9))
 
+                hisashiIndex = self.dlg.hisashiBox.currentIndex()
+
+                attr_9Name = '9_hisashi'
+                if hisashiIndex == 0:
+                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.3}})
+                elif hisashiIndex == 1:
+                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.45}})
+                elif hisashiIndex == 2:
+                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.6}})
+                elif hisashiIndex == 3:
+                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.9}})
+
+            # 10_keraba Field Adding
+            pr_10 = aLayer.dataProvider()
+            # self.dlg.textBrowser.setText(str(pr_10))
+            pr_10.addAttributes([QgsField("10_keraba", QVariant.Double)])
+            aLayer.updateFields()
+            # self.dlg.textBrowser.setText(str(pr_10))
+
+            for feat_10 in aLayer.getFeatures():
+                # self.dlg.textBrowser.setText(str(feat_10))
+
                 kerabaIndex = self.dlg.kerabaBox.currentIndex()
 
-                attr_9Name = '9_keraba'
+                attr_10Name = '10_keraba'
                 if kerabaIndex == 0:
-                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.1}})
+                    pr_10.changeAttributeValues({feat_10.id() : {pr_10.fieldNameMap()[attr_10Name] : 0.1}})
                 elif kerabaIndex == 1:
-                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.2}})
+                    pr_10.changeAttributeValues({feat_10.id() : {pr_10.fieldNameMap()[attr_10Name] : 0.2}})
                 elif kerabaIndex == 2:
-                    pr_9.changeAttributeValues({feat_9.id() : {pr_9.fieldNameMap()[attr_9Name] : 0.3}})
+                    pr_10.changeAttributeValues({feat_10.id() : {pr_10.fieldNameMap()[attr_10Name] : 0.3}})
 
-            # 10yaneatu Field Adding
-            pr10 = aLayer.dataProvider()
-            # self.dlg.textBrowser.setText(str(pr10))
-            pr10.addAttributes([QgsField("10yaneatu", QVariant.Double)])
-            aLayer.updateFields()
-            # self.dlg.textBrowser.setText(str(pr10))
-
-            for feat10 in aLayer.getFeatures():
-                # self.dlg.textBrowser.setText(str(feat10))
-
-                yaneatuIndex = self.dlg.yaneatuBox.currentIndex()
-
-                attr10Name = '10yaneatu'
-                if yaneatuIndex == 0:
-                    pr10.changeAttributeValues({feat10.id() : {pr10.fieldNameMap()[attr10Name] : 0.1}})
-                elif yaneatuIndex == 1:
-                    pr10.changeAttributeValues({feat10.id() : {pr10.fieldNameMap()[attr10Name] : 0.2}})
-                elif yaneatuIndex == 2:
-                    pr10.changeAttributeValues({feat10.id() : {pr10.fieldNameMap()[attr10Name] : 0.3}})
-
-            # 11zoning Field Adding
+            # 11yaneatu Field Adding
             pr11 = aLayer.dataProvider()
             # self.dlg.textBrowser.setText(str(pr11))
-            pr11.addAttributes([QgsField("11zoning", QVariant.Int)])
+            pr11.addAttributes([QgsField("11yaneatu", QVariant.Double)])
             aLayer.updateFields()
             # self.dlg.textBrowser.setText(str(pr11))
 
             for feat11 in aLayer.getFeatures():
                 # self.dlg.textBrowser.setText(str(feat11))
 
+                yaneatuIndex = self.dlg.yaneatuBox.currentIndex()
+
+                attr11Name = '11yaneatu'
+                if yaneatuIndex == 0:
+                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 0.1}})
+                elif yaneatuIndex == 1:
+                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 0.2}})
+                elif yaneatuIndex == 2:
+                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 0.3}})
+
+            # 12zoning Field Adding
+            pr12 = aLayer.dataProvider()
+            # self.dlg.textBrowser.setText(str(pr12))
+            pr12.addAttributes([QgsField("12zoning", QVariant.Int)])
+            aLayer.updateFields()
+            # self.dlg.textBrowser.setText(str(pr12))
+
+            for feat12 in aLayer.getFeatures():
+                # self.dlg.textBrowser.setText(str(feat12))
+
                 zoningIndex = self.dlg.zoningBox.currentIndex()
 
-                attr11Name = '11zoning'
+                attr12Name = '12zoning'
                 if zoningIndex == 0:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 1}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 1}})
                 elif zoningIndex == 1:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 2}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 2}})
                 elif zoningIndex == 2:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 3}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 3}})
                 elif zoningIndex == 3:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 4}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 4}})
                 elif zoningIndex == 4:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 5}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 5}})
                 elif zoningIndex == 5:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 6}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 6}})
                 elif zoningIndex == 6:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 7}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 7}})
                 elif zoningIndex == 7:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 8}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 8}})
                 elif zoningIndex == 8:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 9}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 9}})
                 elif zoningIndex == 9:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 10}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 10}})
                 elif zoningIndex == 10:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 11}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 11}})
                 elif zoningIndex == 11:
-                    pr11.changeAttributeValues({feat11.id() : {pr11.fieldNameMap()[attr11Name] : 12}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 12}})
 
             for i in range(1, 11):
                 aLayer.dataProvider().deleteAttributes([1])
