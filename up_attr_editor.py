@@ -481,28 +481,30 @@ class UPAttrEditor:
 
                 attr12Name = '12zoning'
                 if zoningIndex == 0:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 1}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 0}})
                 elif zoningIndex == 1:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 2}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 1}})
                 elif zoningIndex == 2:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 3}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 2}})
                 elif zoningIndex == 3:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 4}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 3}})
                 elif zoningIndex == 4:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 5}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 4}})
                 elif zoningIndex == 5:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 6}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 5}})
                 elif zoningIndex == 6:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 7}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 6}})
                 elif zoningIndex == 7:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 8}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 7}})
                 elif zoningIndex == 8:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 9}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 8}})
                 elif zoningIndex == 9:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 10}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 9}})
                 elif zoningIndex == 10:
-                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 11}})
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 10}})
                 elif zoningIndex == 11:
+                    pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 11}})
+                elif zoningIndex == 12:
                     pr12.changeAttributeValues({feat12.id() : {pr12.fieldNameMap()[attr12Name] : 12}})
 
             for i in range(1, 11):
