@@ -229,7 +229,8 @@ class UPrepEdit2R:
                 # self.dlg.debugBrowser.setText(str(col_max))
 
             # 座標データ（coordinates）の前までの「，」（カンマ）の数を差し引く
-            ver_max = col_max - 17
+            # ver_max = col_max - 17
+            ver_max = col_max - 16
 
             # C:\にdataディレクトリがなければ作成する
             dirs = os.listdir("C:/")
