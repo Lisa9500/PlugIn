@@ -288,4 +288,4 @@ class UPrepEdit2R:
 
 
             # ファイルを閉じる
-            f.close
+            f.close()
